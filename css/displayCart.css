@@ -1,0 +1,151 @@
+/* Cart table styling */
+table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    vertical-align: middle;
+}
+
+/* Image styling inside the cart */
+.product-image {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Remove button styling */
+.remove-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.remove-btn:hover {
+    background-color: #c82333;
+}
+
+/* Checkout button styling */
+.checkout-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.checkout-btn:hover {
+    background-color: #218838;
+}
+
+/* Center the checkout button */
+.checkout-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.toast-message {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(20px);
+    z-index: 9999;
+}
+.toast-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.cart-badge {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background-color: #dc3545;
+    color: white;
+    font-size: 14px;
+    padding: 3px 7px;
+    border-radius: 50%;
+    font-weight: bold;
+    display: none;
+}
+
+.total-order {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 24px;
+    color: #333;
+}
+
+.checkout-form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.checkout-btn {
+    background-color: #C47335;
+    color: white;
+    padding: 12px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+
+}
+
+.checkout-btn:hover {
+    background-color: #a85b25;
+    transform: scale(1.05);
+}
+
+.total-order {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 24px;
+    color: #333;
+}
+
+.checkout-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.checkout-btn {
+    background-color: #C47335;
+    color: white;
+    padding: 12px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.checkout-btn:hover {
+    background-color: #a85b25;
+    transform: scale(1.05);
+}
+
+

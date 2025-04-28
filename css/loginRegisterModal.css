@@ -1,0 +1,129 @@
+/* Modal overlay - darkens background */
+#modalOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+    z-index: 999; /* Below modal */
+}
+
+/* Modal window */
+#loginModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 95%;             /* make it wider for mobile */
+    max-width: 600px;        /* was 450px, now bigger for desktop */
+    height: 90vh;               /* Taller modal: 90% of viewport height */
+    max-height: 700px;          /* Optional max limit */
+    background-color: #fdf6f0;
+    border-radius: 12px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    animation: fadeInModal 0.4s ease;
+}
+
+.modal-content {
+    padding: 30px;
+    box-sizing: border-box;
+    height: 100%;
+    overflow-y: auto;
+}
+
+
+
+/* Fade-in animation */
+@keyframes fadeInModal {
+    from { opacity: 0; transform: translate(-50%, -45%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/* Modal content */
+.modal-content {
+    padding: 30px;
+    position: relative;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #5a4e3c;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #C47335;
+}
+
+/* Form fields inside modal */
+#loginForm input,
+#registerForm input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+/* Labels */
+#loginForm label,
+#registerForm label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    font-family: 'Sour Gummy', sans-serif;
+    color: #5a4e3c;
+}
+
+/* Buttons */
+#loginForm button,
+#registerForm button {
+    background-color: #C47335;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+#loginForm button:hover,
+#registerForm button:hover {
+    background-color: #b05f26;
+}
+
+/* Switch between login/register */
+#loginFormContainer p,
+#registerFormContainer p {
+    margin-top: 15px;
+    font-size: 15px;
+    text-align: center;
+}
+
+#loginFormContainer p a,
+#registerFormContainer p a {
+    color: #C47335;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#loginFormContainer p a:hover,
+#registerFormContainer p a:hover {
+    text-decoration: underline;
+}
